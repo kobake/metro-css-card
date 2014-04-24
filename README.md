@@ -1,9 +1,9 @@
-metro-card
-==========
+metro-css-card
+==============
 
 Summary
 -------
-Business card template like metro design.
+CSS business card template like metro design.
 
 Size
 ----
