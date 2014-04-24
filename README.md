@@ -15,6 +15,14 @@ Usage
 - (2) Open card.html in some zoom mode by browser, and capture it to make a image file.
 - (3) Make cards by the image file.
 
+Screenshots
+-----------
+Front
+![front](https://raw.githubusercontent.com/kobake/metro-css-card/master/screenshots/1_front.png)
+
+Back
+![back](https://raw.githubusercontent.com/kobake/metro-css-card/master/screenshots/2_back.png)
+
 Engine
 ------
 - [Metro UI CSS](http://metroui.org.ua/)
