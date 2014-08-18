@@ -13,7 +13,7 @@
 	<style type="text/css">
 	body{
 		padding: 50px;
-		background-color: #888;
+		background-color: #444;
 	}
 	.card{
 		width: 700px;
@@ -55,112 +55,129 @@
 		top: -6px;
 	}
 	.back-list-group div{
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 36px;
 	}
 	.back-url{
 		font-size: 26px ! important;
 	}
 	</style>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script>
+		function switchZoom(){
+			if(!this.zoomed){
+				$('#cards').css('zoom', '400%');
+				this.zoomed = true;
+			}
+			else{
+				$('#cards').css('zoom', '100%');
+				this.zoomed = false;
+			}
+		}
+	</script>
 </head>
 <body class="metro">
-<div class="card-title clearfix">
-Front
-</div>
-<div class="card clearfix" style="padding:20px;">
-    <!-- 上部 -->
-    <div class="clearfix">
-        <div class="tile bg-pink ol-transparent"
-            style="width:660px; height:110px;">
-        </div>
-    </div>
-    <!-- 中部 -->
-    <div class="clearfix">
-        <div class="tile bg-amber ol-transparent"
-            style="width:120px; height:120px;">
-            <div class="tile-content icon">
-                <i class="icon-puzzle"></i>
-            </div>
-        </div>
-        <div class="tile bg-lime ol-transparent main-text"
-            style="width:530px; height:120px; margin:0px; padding:10px; padding-top:20px; padding-left:20px;">
-            <div style="font-size:36pt;">Firstname Lastname</div>
-            <div style="font-size:18pt;">Software engineer</div>
-        </div>
-    </div>
-    <!-- 下部 -->
-    <div class="clearfix">
-        <div class="tile bg-orange ol-transparent"
-            style="width:213px; height:110px;">
-            <div class="tile-content icon">
-                <i class="icon-mail"></i>
-            </div>
-            <div class="tile-status" style="text-align:center; top:85px;">
-                <span>anonymous@mail</span>
-            </div>
-        </div>
-        <div class="tile bg-lightBlue ol-transparent"
-            style="width:213px; height:110px;">
-            <div class="tile-content icon">
-                <i class="icon-twitter"></i>
-            </div>
-            <div class="tile-status" style="text-align:center; top:85px;">
-                <span>@anonymous</span>
-            </div>
-        </div>
-        <div class="tile bg-magenta ol-transparent"
-            style="width:214px; height:110px; margin:0px;">
-            <div class="tile-content icon">
-                <i class="icon-github"></i>
-            </div>
-            <div class="tile-status" style="text-align:center; top:85px;">
-                <span>anonymous</span>
-            </div>
-        </div>
-    </div>
-</div>
+<button onclick="switchZoom();" style="margin-bottom: 16px; cursor: pointer ! important;">
+	Switch zoom (for capture)
+</button>
+<div id="cards">
+	<div class="card-title clearfix">
+	Front
+	</div>
+	<div class="card clearfix" style="padding:20px;">
+	    <!-- 上部 -->
+	    <div class="clearfix">
+	        <div class="tile bg-pink ol-transparent"
+	            style="width:660px; height:110px;">
+	        </div>
+	    </div>
+	    <!-- 中部 -->
+	    <div class="clearfix">
+	        <div class="tile bg-amber ol-transparent"
+	            style="width:120px; height:120px;">
+	            <div class="tile-content icon">
+	                <i class="icon-puzzle"></i>
+	            </div>
+	        </div>
+	        <div class="tile bg-lime ol-transparent main-text"
+	            style="width:530px; height:120px; margin:0px; padding:10px; padding-top:20px; padding-left:20px;">
+	            <div style="font-size:36pt;">Firstname Lastname</div>
+	            <div style="font-size:18pt;">Software engineer</div>
+	        </div>
+	    </div>
+	    <!-- 下部 -->
+	    <div class="clearfix">
+	        <div class="tile bg-orange ol-transparent"
+	            style="width:213px; height:110px;">
+	            <div class="tile-content icon">
+	                <i class="icon-mail"></i>
+	            </div>
+	            <div class="tile-status" style="text-align:center; top:85px;">
+	                <span>anonymous@mail</span>
+	            </div>
+	        </div>
+	        <div class="tile bg-lightBlue ol-transparent"
+	            style="width:213px; height:110px;">
+	            <div class="tile-content icon">
+	                <i class="icon-twitter"></i>
+	            </div>
+	            <div class="tile-status" style="text-align:center; top:85px;">
+	                <span>@anonymous</span>
+	            </div>
+	        </div>
+	        <div class="tile bg-magenta ol-transparent"
+	            style="width:214px; height:110px; margin:0px;">
+	            <div class="tile-content icon">
+	                <i class="icon-github"></i>
+	            </div>
+	            <div class="tile-status" style="text-align:center; top:85px;">
+	                <span>anonymous</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 
-<div class="card-title clearfix">
-Back
-</div>
-<div class="card clearfix" style="padding:20px;">
-    <!-- 上部 -->
-    <div class="clearfix">
-        <div class="tile bg-red ol-transparent back-list-group"
-            style="width:325px; height:175px; padding:10px; font-size:16pt; line-height:140%;">
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-        </div>
-        <div class="tile bg-green ol-transparent back-list-group"
-            style="width:325px; height:175px; margin:0px; padding:10px; font-size:16pt; line-height:140%;">
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-        </div>
-    </div>
-    <!-- 下部 -->
-    <div class="clearfix">
-        <div class="tile bg-amber ol-transparent back-list-group"
-            style="width:325px; height:175px; padding:10px; font-size:16pt; line-height:140%;">
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-            <div>- Item</div> 
-        </div>
-        <div class="tile bg-indigo ol-transparent"
-            style="width:325px; height:175px; margin:0px; padding:10px; font-size:16pt;">
-            <div class="tile-content icon">
-                <i class="icon-stats-up"></i>
-            </div>
-            <div class="tile-status" style="text-align:center; top:128px;">
-                <span class="back-url">http://anonymous/</span>
-            </div>
-
-        </div>
-    </div>
+	<div class="card-title clearfix">
+	Back
+	</div>
+	<div class="card clearfix" style="padding:20px;">
+	    <!-- 上部 -->
+	    <div class="clearfix">
+	        <div class="tile bg-red ol-transparent back-list-group"
+	            style="width:325px; height:175px; padding:10px; font-size:16pt; line-height:140%;">
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	        </div>
+	        <div class="tile bg-green ol-transparent back-list-group"
+	            style="width:325px; height:175px; margin:0px; padding:10px; font-size:16pt; line-height:140%;">
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	        </div>
+	    </div>
+	    <!-- 下部 -->
+	    <div class="clearfix">
+	        <div class="tile bg-amber ol-transparent back-list-group"
+	            style="width:325px; height:175px; padding:10px; font-size:16pt; line-height:140%;">
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	            <div>- Item</div> 
+	        </div>
+	        <div class="tile bg-indigo ol-transparent"
+	            style="width:325px; height:175px; margin:0px; padding:10px; font-size:16pt;">
+	            <div class="tile-content icon">
+	                <i class="icon-stats-up"></i>
+	            </div>
+	            <div class="tile-status" style="text-align:center; top:128px;">
+	                <span>http://anonymous/</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>
 </body>
 </html>
